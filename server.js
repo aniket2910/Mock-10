@@ -10,6 +10,7 @@ const { authRouter } = require("./routes/auth.routes");
 const { todoRouter } = require("./routes/todo.routes");
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(cors());
 
 app.use("/auth", authRouter);
 app.use("/todos", todoRouter);
